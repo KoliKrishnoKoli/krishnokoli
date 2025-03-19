@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="robots" content="noarchive">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>হিহি</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { font-size: 62.5% }
+
+body {
+  background-color: #222;
+  display: grid;
+  place-content: center;
+  padding: 8rem 0;
+  font-family: "Lato", serif;
+}
+
+.title {
+  color: white;
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.image-box {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.image-box img {
+  width: 20rem;
+  aspect-ratio: 2 / 3;
+  flex: 1;
+  object-fit: cover;
+  filter: sepia(100%) blur(1px);
+  transition: all .2s;
+  border-radius: .8rem;
+  animation: enter-animation 1s;
+}
+
+.image-box img:hover {
+  filter: sepia(0%);
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+@keyframes enter-animation {
+  from {
+    opacity: 0;
+    transform: rotate(5deg) translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+	</style>
+</head>
+<body>
+<h1 class="title">হিহি</h1>
+
+<div id="imgBox" class="image-box"></div>
+</body>
+<script>
+	const imgURLs = [
+  "https://krishnokoli.me/images/lotus.jpg",
+];
+
+imgURLs.forEach((url, i) => {
+  const newImg = document.createElement("img");
+  newImg.setAttribute("src", url);
+  const delay = ((i + 1) * 2) / 10
+  newImg.style.animationDuration = `${delay}s`
+  document.getElementById("imgBox").appendChild(newImg);
+})
+
+// window.addEventListener("load", (event) => {
+// });
+</script>
+</html>

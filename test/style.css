@@ -1,28 +1,28 @@
 /* Mobile View */
 @media screen and (max-width: 768px) {
     blockquote.instagram-media {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
     }
 
     /* Instagram Post Content - Full width on mobile */
     .instagram-media > div {
-        width: 100%;
-        padding: 0;
+        width: 100% !important;
+        padding: 0 !important;
     }
 
     /* Adjust padding for mobile view */
     .instagram-media > div a {
-        padding: 8px;
+        padding: 8px !important;
     }
 }
 
 /* Tablet and Desktop View */
 @media screen and (min-width: 769px) {
     blockquote.instagram-media {
-        width: 100%;
-        max-width: 540px;
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: 540px !important;
+        margin: 0 auto !important;
     }
 }

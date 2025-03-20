@@ -1,15 +1,28 @@
-/* Adjust layout for screens smaller than 768px (mobile devices) */
+/* Mobile View */
 @media screen and (max-width: 768px) {
-    .instagram-media {
+    blockquote.instagram-media {
+        width: 100%;
         max-width: 100%;
-        margin: 0;
+        margin: 0 auto;
+    }
+
+    /* Instagram Post Content - Full width on mobile */
+    .instagram-media > div {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust padding for mobile view */
+    .instagram-media > div a {
+        padding: 8px;
     }
 }
 
-/* Adjust layout for larger screens (desktop) */
+/* Tablet and Desktop View */
 @media screen and (min-width: 769px) {
-    .instagram-media {
+    blockquote.instagram-media {
+        width: 100%;
         max-width: 540px;
-        margin: 1px;
+        margin: 0 auto;
     }
 }

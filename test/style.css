@@ -1,0 +1,15 @@
+/* Adjust layout for screens smaller than 768px (mobile devices) */
+@media screen and (max-width: 768px) {
+    .instagram-media {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+/* Adjust layout for larger screens (desktop) */
+@media screen and (min-width: 769px) {
+    .instagram-media {
+        max-width: 540px;
+        margin: 1px;
+    }
+}

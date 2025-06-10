@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>কলি - কৃষ্ণকলি | Koli - KrishnoKoli</title>
+	<link rel="icon" type="image/x-icon" href="https://krishnokoli.me/images/Koli.jpg">
+	<meta name="description" content="কলি - কৃষ্ণকলি | Koli - KrishnoKoli - Bong Girl">
+	<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://krishnokoli.me">
+<meta property="og:type" content="website">
+<meta property="og:title" content="কলি - কৃষ্ণকলি | Koli - KrishnoKoli">
+<meta property="og:description" content="কলি - কৃষ্ণকলি | Koli - KrishnoKoli - Bong Girl">
+<meta property="og:image" content="https://krishnokoli.me/images/Koli.jpg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="krishnokoli.me">
+<meta property="twitter:url" content="https://krishnokoli.me">
+<meta name="twitter:title" content="কলি - কৃষ্ণকলি | Koli - KrishnoKoli">
+<meta name="twitter:description" content="কলি - কৃষ্ণকলি | Koli - KrishnoKoli - Bong Girl">
+<meta name="twitter:image" content="https://krishnokoli.me/images/Koli.jpg">
+<meta name="theme-color" content="#161616">
+<meta name="msapplication-navbutton-color" content="#161616">
+<meta name="apple-mobile-web-app-status-bar-color" content="#161616">
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{box-sizing:border-box;}
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font: 400 16px/24px Josefin Sans, sans-serif;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	color: #212121;
+	text-align: left;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+a, a:active, a:link, a:visited {
+	text-decoration: none;
+	color: #039BE5;
+	transition: color .25s linear;
+}
+h1, h2 {
+	font-weight: 500;
+	margin: 0;
+}
+h1 {font-size: 24px;
+font-weight: bold;}
+h2 {font-size: 16px;
+	color:#330867;
+}
+p {margin: 0px;}
+.hidden{
+	opacity:0;
+	visivility: hidden;
+}
+.no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+
+.profile-wrapper {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.profile-header {
+	/*background-color: #263238;*/
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	padding: 10px;
+	color: #fff;
+	text-align:center;
+}
+.profile-bio {
+	padding: 20px;
+	overflow: hidden;
+	background-color: #FAFAFA;
+}
+.profile-avatar {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	height: 160px;
+	width: 160px;
+	overflow: hidden;
+	margin: 15px 30px 15px 30px;
+	border-radius: 50%;
+	border: 10px solid rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease;
+}
+.profile-avatar:hover {
+	box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+	cursor:pointer;
+}
+.profile-avatar:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.profile-avatar img {
+	width: 120%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: width 0.3s ease;
+}
+.profile-avatar:hover img {
+	width: 130%;
+}
+
+#profile-bio-wrapper {
+	position: absolute;
+	top: 88%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+	box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1), 0px -1px 6px rgba(0, 0, 0, 0.12);
+	transition: transform .4s cubic-bezier(0.4,0.0,0.2,1);
+}
+.show-more-info {
+	transform: translateY(-80%);
+}
+
+p.short-description {
+	margin-bottom: 57px;
+}
+#show-more-icon {
+	display: inline-block;
+	text-align: center;
+	font-size: 50px;
+	/*color: #263238;*/
+	background-color: #fff;
+	position: absolute;
+	top: -25px;
+	left: 50%;
+	z-index: 3;
+	transform: translateX(-50%);
+	background-color: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+	height: 48px;
+	width: 49px;
+	background: linear-gradient(to right, #1f4037, #99f2c8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+/*	background: linear-gradient(to right, #373b44, #4286f4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+}
+.show-more-info #show-more-icon .fa {
+	transform: rotate(180deg);
+}
+
+#show-more-icon .fa {
+	line-height: 48px;
+	transition: transform .4s ease-in-out;
+	transform: scale(1); /* default size */
+	/*background: linear-gradient(to right, #373b44, #4286f4);*/
+/* 	background: linear-gradient(to right, #1f4037, #99f2c8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	border-radius: 50%;
+	box-shadow: 0px 3px 6px rgba(255, 100, 100, 0.2), 0px 3px 6px rgba(255, 0, 0, 0.25);
+	display: inline-block;
+	font-size: 44px;
+	transition: transform 0.3s ease;
+
+}
+
+/*#show-more-icon:hover .fa {
+	
+	box-shadow: 0px 3px 6px rgba(255, 100, 100, 0.2), 0px 3px 6px rgba(255, 0, 0, 0.25);
+	border-radius: 50%;
+	background: linear-gradient(to right, #1f4037, #99f2c8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}*/
+
+.social-list {
+	background-color: #eee;
+	border-bottom: 2px solid #eee;
+}
+
+.social-list ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+li.bio-item {
+	display: table-cell;
+}
+li.bio-item:hover {
+	background-color: #E0E0E0;
+}
+
+/* 4 te item like insta, fb, twiiter, mail ba j kono ki6ue 4 ter khetere: 
+ child 1 & 2 chng kore 2 & 3 koerte hbe r okhane link add korte hbe*/
+li.bio-item:nth-child(1) {
+	padding-right: 0px;
+	border-right: 10px solid transparent;
+}
+li.bio-item:nth-child(2) {
+	border-left: 10px solid transparent;
+}
+
+.paper-button {
+	cursor: pointer;
+}
+
+li.bio-item a {
+	color: #616161;
+	display: block;
+	padding: 12px 0;
+}
+
+.bio-extra {
+	padding: 20px;
+	overflow: auto;
+	height: 81%;
+}
+.bio-extra a {
+	background-color: #ffff00;
+	color: #000;
+}
+
+.bio-extra p {
+	margin-bottom: 15px;
+}
+
+
+/* #####################################
+ALL THE REST ############################
+######################################## */
+
+.mail-wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	margin-top: 35px;
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+	/*background-color: #607D8B;*/
+	background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+	box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+	opacity:0;
+	z-index: -1;
+	animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.4s ease-in-out forwards;
+	animation-delay: 0s, 0.7s, 1.7s, 2.4s;
+	will-change: auto;
+}
+
+.mail-content{
+	opacity:0;
+	box-sizing: border-box;
+	color: #000;
+	animation: moveInCenter 0.6s ease forwards;
+	animation-delay: 2.7s;
+}
+
+.bottom-ball-fill{
+	position: fixed;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50%,-50%);
+	height:0px;
+	width:0px;
+	border-radius: 50%;
+	/*background-color: #607D8B;*/
+	background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+	z-index:0;
+	animation: puff 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s linear forwards;
+	animation-delay: 1.8s, 2.3s;
+}
+
+
+
+/* Animations */
+@keyframes init {
+	0% {
+		width: 0px;
+		height: 0px;
+		margin-top: 35px;
+	}
+	100% {
+		width: 56px;
+		height: 56px;
+		opacity: 1;
+		z-index:2;
+	}
+}
+@keyframes moveDown {
+	0% {
+		top: 50%;
+	}
+	50% {
+		top: 40%;
+	}
+	100% {
+		top: 100%;
+		margin-top: 0;
+	}
+}
+@keyframes moveUp {
+	0% {
+		top: 100%;
+		background: #607D8B;
+	}
+	50% {
+		top: 40%;
+	}
+	100% {
+		top: 50%;
+		background: #fff;
+	}
+}
+@keyframes materia {
+	0% {
+		background: #fff;
+	}
+	100% {
+		width: 300px;
+		height: 410px;
+		background: #fff;
+		border-radius: 10px;
+	}
+}
+
+@keyframes puff {
+	0% {
+		top: 100%;
+		height:50px;
+		width:50px;
+		transform:translate(-50%,-50%) scale(0);
+	}
+	100% {
+		top: 50%;
+		height:50px;
+		width:50px;
+		transform:translate(-50%,-50%) scale(50);
+		z-index: 1;
+
+	}
+}
+@keyframes borderRadius {
+	0% {
+		border-radius: 50%;
+	}
+	100% {
+		border-radius: 0px;
+	}
+}
+
+
+@keyframes moveInCenter {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.bio-extra::-webkit-scrollbar-track {
+	background-color: #F4F4F4;
+}
+.bio-extra::-webkit-scrollbar {
+	width: 6px;
+	background: #F4F4F4;
+}
+.bio-extra::-webkit-scrollbar-thumb {
+	background: #dad7d7;
+}
+
+.fa {
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+.fa:hover{
+	transform: scale(1.5); /* zoom in */
+	/*filter: brightness(1.2);*/ /* optional: make it brighter on hover */
+	transform: scale(1.5);
+}
+.fa-facebook{
+	color:#1877F2;
+}
+.fa-facebook:hover{
+	/*filter: brightness(1.2) drop-shadow(0 0 5px #1877f2);*/
+	filter: drop-shadow(0 0 10px #1877f2); /* Glow only */
+}
+.fa-instagram {
+	background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-instagram:hover{
+	filter: drop-shadow(0 0 5px #fd1d1d);
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="mail-container">
+    <div class="mail-wrapper">
+        <div class="mail-content">
+            <div class="profile-wrapper">
+                <div class="profile-header profile-same">
+                    <div class="profile-avatar">
+                        <img src="https://krishnokoli.me/images/Koli.jpg" title="কৃষ্ণকলি">
+                    </div>
+                    <h1>কৃষ্ণকলি</h1>
+                    <h2>Bong Girl</h2>
+                </div>
+                <div class="profile-bio profile-same">
+                    <p class="short-description">Hi! <br>My name is Koli from WB, India.</p>
+                    <div id="profile-bio-wrapper">
+                        <div id="show-more-icon" class="no-select">
+                            <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="social-list">
+                            <ul>
+                                <li class="bio-item paper-button"><a href="https://www.facebook.com/profile.php?id=100086468935688" title="Facebook" target="_blank"><i class="fa fa-fw fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="bio-item paper-button"><a href="https://www.instagram.com/moumita_0419/" title="Instagram" target="_blank"><i class="fa fa-fw fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                                <!-- <li class="bio-item paper-button"><a title="Twitter" target="_blank"><i class="fa fa-fw fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="bio-item paper-button"><a href="mailto:test@email.com?Subject=Website%20development" target="_top"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></a></li> -->
+                            </ul>
+                        </div>
+                        <div class="bio-extra">
+                            <p>Hi, my name is Koli and I'm from West Bengal, India.</p>
+                            <p>I find joy in nature — the sky, the blossoming of flowers, and the gentle growth of plants from tiny buds.</p> 
+                            <p>I enjoy gardening and the calm it brings; I have a deep appreciation for poetry and the emotions it stirs.</p>
+                            <p style="text-align:center;font-family:Courier New;font-size:12px;font-weight:bold;color:#000080;">&copy; KrishnoKoli.me</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-ball-fill"></div>
+
+<!-- <script>
+const bioShowMore = document.getElementById('show-more-icon');
+const bioMoreWrap = document.getElementById('profile-bio-wrapper');
+const icon = bioShowMore.querySelector('.fa');
+
+function togglePanel() {
+    bioMoreWrap.classList.toggle('show-more-info');
+    icon.classList.toggle('rotated');
+}
+
+// Toggle on icon click
+bioShowMore.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent triggering document click
+    togglePanel();
+});
+
+// Close panel on clicking outside
+document.addEventListener('click', function(event) {
+    if (bioMoreWrap.classList.contains('show-more-info') &&
+        !bioMoreWrap.contains(event.target) &&
+        !bioShowMore.contains(event.target)) {
+        bioMoreWrap.classList.remove('show-more-info');
+        icon.classList.remove('rotated');
+    }
+});
+</script>
+
+
+
+</body> -->
+<script>
+var bioShowMore = document.getElementById('show-more-icon');
+var bioMoreWrap = document.getElementById('profile-bio-wrapper');
+
+if (typeof(bioShowMore) != 'undefined' && bioShowMore != null){
+    bioShowMore.addEventListener('click', function(){
+        bioMoreWrap.classList.toggle('show-more-info');
+    });
+}
+</script>
+</body>
+</html>
